@@ -6,6 +6,7 @@ class Image(models.Model):
     name = models.CharField(max_length =30)
     caption = models.CharField(max_length =250)
     comment = models.CharField(max_length =100)
+    profile = models.ForeignKey(Profile)
 
     def __str__(self):
         return self.name
