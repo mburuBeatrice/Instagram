@@ -21,4 +21,5 @@ class Image(models.Model):
         ordering = ['name']
     def save_image(self):
         self.save()
-      
+    def delete_image(self):
+        self.delete()
