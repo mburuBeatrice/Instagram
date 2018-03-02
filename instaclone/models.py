@@ -6,6 +6,14 @@ from django.db import models
 class Profile(models.Model):
     profile_photo = models.ImageField(upload_to = 'profile/')
     bio = models.CharField(max_length =250)
+    
+    def __str__(self):
+        return self.bio
+    class Meta:
+        ordering = ['bio']
+    
+    def save_profile(self):
+        self.save()
 
 class Image(models.Model):
     photo = models.ImageField(upload_to = 'image/')
