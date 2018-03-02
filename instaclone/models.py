@@ -18,7 +18,8 @@ class Profile(models.Model):
         self.delete()
     def update_profile(self):
         self.update()
-        
+    def find_profile(name):
+        pass   
 
 class Image(models.Model):
     photo = models.ImageField(upload_to = 'image/')
