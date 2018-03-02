@@ -25,4 +25,5 @@ class Image(models.Model):
         self.delete()
     def update_caption(self):
         self.update()
-            
+    def get_image_by_id(self):
+        pass        
