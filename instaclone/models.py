@@ -19,3 +19,6 @@ class Image(models.Model):
         return self.name
     class Meta:
         ordering = ['name']
+    def save_image(self):
+        self.save()
+      
