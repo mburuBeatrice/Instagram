@@ -1,12 +1,13 @@
 from django.db import models
-
+from django.contrib.auth.models import User
+from tinymce.models import HTMLField
 # Create your models here.
 
 
 class Profile(models.Model):
     profile_photo = models.ImageField(upload_to = 'profile/')
     bio = models.CharField(max_length =250)
-    
+    user = models.ForeignKey(User,on_delete=models.CASCADE)
     def __str__(self):
         return self.bio
     class Meta:
@@ -26,8 +27,9 @@ class Image(models.Model):
     name = models.CharField(max_length =30)
     caption = models.CharField(max_length =250)
     comment = models.CharField(max_length =100)
-    profile = models.ForeignKey(Profile,null=True, blank=True)
+    profile = models.ForeignKey(Profile)
     likes = models.CharField(max_length =30, null=True, blank=True)
+
 
     def __str__(self):
         return self.name
