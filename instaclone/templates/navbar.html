@@ -9,14 +9,14 @@
        
         
   <nav class="uk-navbar-container" uk-navbar>
-      <div class="uk-navbar-left">
+      <div class="uk-navbar-left uk-margin-xlarge-left">
           <a href="" uk-icon="instagram"></a>
       </div>
       <div class="uk-navbar-left">
   
           <ul class="uk-navbar-nav">
           
-              <li class="uk-active" id="h2"><a href="/">INSTAGRAM</a></li>
+              <li class="uk-active uk-margin-large-left" id="insta"><a href="/">INSTAGRAM</a></li>
   
           </ul>
   
@@ -35,21 +35,21 @@
     
   
       </div>
-      <div class="uk-navbar-right">
-          <a href="" uk-icon="heart"></a>
-          <a href="" uk-icon="user"></a>
+      <div class="uk-navbar-right uk-margin-large-right">
+          <span href="" uk-icon="upload"></span>
+          <span href="" uk-icon="heart" ></span>
+          <a href="" uk-icon="user" class="uk-margin-small-left"></a>
              
       </div>
-      <button class="uk-button uk-button-default" type="button">Hover</button>
+      <button class="uk-button uk-button-small uk-margin-xlarge-right" type="button">Sign In</button>
 <div uk-dropdown>
         {% if user.is_authenticated %}
     <ul class="uk-nav uk-dropdown-nav">
         <li><a href="/accounts/password/change">Change Password</a></li>
+        <li><a href="">Create Profile</a></li>
         <li><a href="/logout">Logout</a></li>
         {% endif %}
-        <li>
-                <a class='btn btn-default' href="/accounts/login">Login</a>
-              </li>
+        
     </ul>
 </div>
   
