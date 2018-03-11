@@ -1,0 +1,34 @@
+
+{%extends 'base.html'%}
+
+{% block content %}
+{{block.super}} 
+{% for prof in prof_list%}
+<div class="uk-child-width-1-2@m ">
+        <div class="uk-flex uk-float-left  uk-margin-medium-left uk-margin-medium-top uk-margin-small-right">
+               
+                     
+                <div>
+                        <div class="uk-card uk-card-default uk-card uk-card-hover">
+                            <div class="uk-card-media-top">
+                                   
+                                            <div class="uk-card uk-card-default uk-card-body ">
+                                                <img src="{{prof.profile_photo.url}}" class="img-responsive" alt="photo">
+                                                
+                                                <a href="{{ prof.get_absolute_url }}">{{prof.bio}}</a></b                             
+                            
+                        </div>
+                    </div>
+                            <div class="uk-card-footer">
+                                    <a href="" class="uk-button uk-button-text">Read more</a>
+                                </div>    
+                        </div>
+                       
+                    </div>
+                </div>
+        
+    </div>
+
+{%endfor%}
+
+{% endblock %}

@@ -1,28 +1,8 @@
-{%extends 'base.html'%}
+<!-- {%extends 'base.html'%}
 
- {% block content %}
-
- <div class="container">
-
-   <div class="row">
-        <img src="{{image.photo.url}}" class="img-responsive" alt="image ">
-   </div>
-
-   <div class="row">
-     <h1 class="text-center">{{profile.bio}}</h1>
-   </div>
-
-   <div class="row">
-     {% autoescape on %}
-     {{profile.post| safe}}
-    {% endautoescape %}
-
-   </div>
-
-   <div class="row">
-     <p>Posted</p>
-   </div>
-
- </div>
-
- {% endblock %
+{% block content %}
+{%for us_item in us %}
+<p>{{us_item.user_name}}</p>
+{%endfor%}
+{{block.super}}
+{% endblock %} -->
