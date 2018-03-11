@@ -1,0 +1,20 @@
+
+{%extends 'base.html'%}
+
+{% block content %}
+{{block.super}}
+
+<h1>{{name}}</h1>
+
+
+<img src="{{instance.photo.url}}" class='img-responsive' alt=""/>
+{{instance.user}}</br>
+{{instance.name}}</br>
+{{instance.caption}}</br>
+{{instance.profile}}</br>
+{{instance.lastupdated}}</br>
+{{instance.timestamp}}</br>
+{{instance.id}}</br>
+
+
+{% endblock %}
