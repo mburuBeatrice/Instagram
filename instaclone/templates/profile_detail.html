@@ -1,0 +1,13 @@
+
+{%extends 'base.html'%}
+
+{% block content %}
+{{block.super}}
+
+
+<img src="{{insta.profile_photo.url}}" class='img-responsive' alt=""/>
+{{insta.bio}}</br>
+{{insta.user}}</br>
+{{insta.id}}
+
+{% endblock %}
