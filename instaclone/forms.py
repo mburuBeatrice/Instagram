@@ -1,9 +1,12 @@
-from .models import Profile
 from django import forms
-class NewProfileForm(forms.ModelForm):
+from .models import Post,Profile
+
+class PostForm(forms.ModelForm):
+    class Meta:
+        model = Post
+        exclude = ['timestamp', 'lastupdated', 'likes', 'profile', 'comment']
+
+class ProfileForm(forms.ModelForm):
     class Meta:
         model = Profile
-        exclude = ['profile']
-        widgets = {
-            'tags': forms.CheckboxSelectMultiple(),
-        }
+        fields = ['profile_photo','bio']
