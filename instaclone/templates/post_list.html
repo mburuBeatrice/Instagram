@@ -1,0 +1,44 @@
+
+{%extends 'base.html'%}
+
+{% block content %}
+{{block.super}} 
+{% for obj in object_list%}
+<div class="uk-child-width-1-2@m ">
+        <div class="uk-flex uk-float-left  uk-margin-medium-left uk-margin-medium-top uk-margin-small-right">
+               
+                     
+                <div>
+                        <div class="uk-card uk-card-default uk-card uk-card-hover">
+                            <div class="uk-card-media-top">
+                                   
+                                            <div class="uk-card uk-card-default uk-card-body ">
+                                                <a href="{{ obj.get_absolute_url }}"><img src="{{obj.photo.url}}" class="img-responsive" alt="photo"></a>
+                                                
+                                                    {{obj.name}}</br>
+                                                    {{obj.caption}}</br>
+                                                    {{obj.profile}}</br>
+                                                    {{obj.id}}</br>
+                                                    
+                                                    <!-- {{obj.lastupdated}}</br> -->
+                                                    <p>{{obj.timestamp|timesince}} ago</p></br>
+                                        
+                                                    
+                                                
+                                                    
+                            
+                        </div>
+                    </div>
+                            <div class="uk-card-footer">
+                                    <a href="" class="uk-button uk-button-text">Read more</a>
+                                </div>    
+                        </div>
+                       
+                    </div>
+                </div>
+        
+    </div>
+
+{%endfor%}
+
+{% endblock %}
